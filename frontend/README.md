@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# Question Paper Generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack web application for generating customized question papers with authentication, secure access, and PDF export functionality.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Core Features
 
-### `npm start`
+### 📄 Question Paper Generation
+- Create customized question papers with **Part A (2-mark)** and **Part B (10-mark)** questions  
+- **PDF generation** with proper formatting and structure  
+- Dynamic question selection based on subject and marks criteria  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 🗄️ Database Integration
+- **MongoDB Atlas** for persistent data storage  
+- Questions stored with subject, text, and marks attributes  
+- Efficient query system for retrieving appropriate questions  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 🔑 User Authentication System
+- **JWT-based authentication** for secure access  
+- Registration and login functionality  
+- Token stored in `localStorage` for persistent sessions  
+- **Bcrypt** password hashing for security  
 
-### `npm test`
+### 🔒 Protected Routes
+- All backend API endpoints protected with **auth middleware**  
+- Frontend routes redirect unauthenticated users to the login page  
+- API calls include authentication tokens in request headers  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 🎨 UI Experience
+- **3-second intro animation** on application load  
+- Responsive design with modern styling  
+- Intuitive form controls for question paper customization  
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🏗️ Architecture
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Backend
+- **Express.js** server with RESTful API endpoints  
+- Authentication middleware for route protection  
+- MongoDB connection with **Mongoose schemas**  
+- JWT verification for secure API access  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Frontend
+- **React** with component-based architecture  
+- **React Router** for navigation and protected routes  
+- **Framer Motion** for animations  
+- Authentication state management across components  
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🔐 Security Features
+- Password hashing with **bcrypt**  
+- **JWT token authentication**  
+- Protected API endpoints  
+- Secure routing system  
+- Authentication token verification  
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📂 Project Structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Key Implementation Details
 
-## Learn More
+#### 🔑 Authentication Flow
+1. User registers/logs in to receive a **JWT token**  
+2. Token is stored in `localStorage`  
+3. Token included in all API requests  
+4. Server validates token before processing requests  
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### 📄 Question Paper Generation Process
+1. Select subject and configure marks distribution  
+2. Application fetches appropriate questions from the database  
+3. Generated as a **downloadable PDF** with proper formatting  
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### 🧑‍💻 User Experience
+- Intro animation welcomes users  
+- Protected content ensures security  
+- Intuitive navigation with login/logout functionality  
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## ⚡ Tech Stack
+- **Frontend:** React, React Router, Framer Motion  
+- **Backend:** Node.js, Express.js  
+- **Database:** MongoDB Atlas with Mongoose  
+- **Authentication:** JWT, bcrypt  
+- **Other:** PDF generation, RESTful API  
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
