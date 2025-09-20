@@ -1,0 +1,23 @@
+.intro-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.intro-title {
+  font-size: 3rem;
+  color: #ffffff;
+  text-align: center;
+  background: linear-gradient(45deg, #1DB954, #4CAF50);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 15px rgba(29, 185, 84, 0.5);
+}
